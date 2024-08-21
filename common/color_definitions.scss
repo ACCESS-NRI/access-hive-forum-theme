@@ -1,0 +1,42 @@
+// Body text background colors
+$dark-theme-text-background: #222222;
+$light-theme-text-background: #ffffff;
+$text_background: dark-light-choose(
+  $light-theme-text-background,
+  $dark-theme-text-background
+);
+
+// Category tile text colors
+$dark-theme-category-tile-color: #ffffff;
+$light-theme-category-tile-color: #909090;
+$category_tile_color: dark-light-choose(
+  $light-theme-category-tile-color,
+  $dark-theme-category-tile-color
+);
+
+// Search banner text colours
+$dark-theme-search-text-color: #909090;
+$light-theme-search-text-color: #005b94;
+$search_text_color: dark-light-choose(
+  $light-theme-search-text-color,
+  $dark-theme-search-text-color
+);
+
+// Navigation bar icon colours
+$light-nav-icon-color: whitesmoke;
+$light-nav-icon-color-hover: lightgray;
+$dark-nav-icon-color: gray;
+$dark-nav-icon-color-hover: dimgray;
+$nav_icon_color: dark-light-choose($light-nav-icon-color, $dark-nav-icon-color);
+$nav_icon_color_hover: dark-light-choose(
+  $light-nav-icon-color-hover,
+  $dark-nav-icon-color-hover
+);
+
+:root {
+  --custom-text_background: #{$text_background};
+  --custom-category_tile_color: #{$category_tile_color};
+  --custom-search_text_color: #{$search_text_color};
+  --custom-nav_icon_color: #{$nav_icon_color};
+  --custom-nav_icon_color_hover: #{$nav_icon_color_hover};
+}

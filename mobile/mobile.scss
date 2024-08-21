@@ -1,0 +1,78 @@
+:root {
+  --border-radius: 10px;
+}
+
+// Homepage search banner
+div.search-banner {
+  div.custom-search-banner-wrap {
+    h1 {
+      // Required for Dongle font to fix font sizing issue
+      font-size: 3rem;
+      line-height: 0.4;
+      margin-top: 0.5em;
+      // End required for Dongle font
+    }
+  }
+}
+
+// Category list view
+div.category-list-item.category {
+  border-style: solid;
+  // Border for category list view in mobile
+  // Comment this out if you want to use the default category colours
+  border: 2px solid var(--tertiary) !important;
+  background-color: var(--custom-text_background);
+  border-radius: var(--border-radius);
+  padding-bottom: 0.5em;
+  padding-left: 1ch;
+  padding-right: 2ch;
+}
+
+// Topic list view
+body.category {
+  div.container.list-container {
+    padding-left: 1ch;
+    padding-right: 2ch;
+    background-color: var(--custom-text_background);
+    border-radius: 10px;
+    border: 2px solid var(--primary-low);
+    padding-bottom: 0;
+    margin-bottom: 1em;
+  }
+}
+
+// Topic page view
+.topic-body div.topic-meta-data {
+  margin-top: 0.5em;
+  margin-left: 65px;
+}
+
+body.category:not(.category-header) {
+  background-color: var(--secondary);
+  div.container.posts {
+    border-radius: var(--border-radius);
+    background-color: var(--custom-text_background);
+    border: 2px solid var(--primary-low);
+    padding-left: 2ch;
+    padding-right: 3ch;
+  }
+}
+
+div#list-area {
+  margin-bottom: 1em; // Get rid of huge 100px margin on bottom of list
+}
+
+.category-title-header {
+  .category-title-name h1 {
+    font-size: 1em;
+  }
+  .category-title-description .cooked {
+    line-height: 1;
+    font-size: 0.95em;
+  }
+}
+body:not(.category-header) {
+  .category-list .category-logo {
+    display: none;
+  }
+}
