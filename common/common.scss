@@ -1,0 +1,197 @@
+// Branding font
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+
+// Default border radius
+:root {
+  --branding-font: Dongle;
+  --border-radius: 10px;
+}
+
+@keyframes background-fade-highlight {
+  0% {
+    background-color: var(--tertiary-low);
+  }
+  100% {
+    background-color: var(--custom-text_background);
+  }
+}
+
+// Welcome banner tweaks
+.welcome-link-banner-wrapper {
+  .welcome-wrapper {
+    border-radius: var(--border-radius);
+  }
+}
+
+// global notice tweaks
+.global-notice {
+  div.alert {
+    padding: 1em 2.5em 1em 2.5em;
+    border-radius: var(--border-radius);
+  }
+}
+
+// Navigation bar icons
+header.d-header ul.d-header-icons {
+  svg.d-icon {
+    fill: var(--custom-nav_icon_color);
+  }
+  .active .icon {
+    background-color: transparent;
+  }
+  .color-scheme-toggler {
+    background-color: transparent;
+  }
+  #search-button {
+    border: 0px;
+    &:after {
+      border: 0px;
+    }
+  }
+  span.icon:hover,
+  button.icon:hover,
+  a.icon:hover {
+    background: transparent;
+    svg.d-icon {
+      fill: var(--custom-nav_icon_color_hover);
+    }
+  }
+}
+
+// Navigation bar burger menu
+.header-sidebar-toggle button .d-icon {
+  // Burger menu icon color
+  color: var(--custom-nav_icon_color);
+}
+
+.header-sidebar-toggle button:focus:hover,
+.header-sidebar-toggle button:hover {
+  background: transparent !important;
+}
+
+.discourse-no-touch .btn-flat:hover .d-icon,
+.discourse-no-touch .json-editor-btn-collapse:hover .d-icon,
+.discourse-no-touch .btn-flat:focus .d-icon,
+.discourse-no-touch .json-editor-btn-collapse:focus .d-icon {
+  // Burger menu icon hover color
+  color: var(--custom-nav_icon_color_hover) !important;
+}
+
+// Custom navigation bar links
+.custom-header-links {
+  font-size: 0.8rem;
+}
+
+// Input boxes
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  background-color: var(--custom-text_background);
+  border-radius: var(--border-radius);
+}
+
+// Buttons
+button.btn {
+  border-radius: var(--border-radius);
+}
+
+// Dropdowns
+details.combo-box.select-kit,
+details.multi-select.select-kit {
+  summary.select-kit-header,
+  summary.select-kit-header.multi-select-header,
+  div.select-kit-body {
+    background-color: var(--custom-text_background);
+    border-radius: var(--border-radius);
+  }
+}
+
+details.select-kit.single-select.dropdown-select-box {
+  summary.select-kit-header,
+  div.select-kit-body {
+    border-radius: var(--border-radius);
+  }
+  div.select-kit-body {
+    background-color: var(--custom-text_background);
+  }
+}
+
+// Homepage search banner
+div.search-banner {
+  div.custom-search-banner-wrap {
+    p {
+      text-align: left;
+      color: var(--primary-high);
+    }
+    h1 {
+      color: var(--custom-search_text_color);
+      font-family: var(--branding-font);
+      text-align: left;
+      // Required for Dongle font to fix font sizing issue
+      font-size: 4rem;
+      line-height: 0.7;
+      // End required for Dongle font
+    }
+    & > div.search-menu {
+      text-align: left;
+      margin: 0;
+    }
+  }
+}
+
+// Navigation bar search menu
+.search-menu div.search-menu-panel {
+  background-color: var(--custom-text_background);
+  border-radius: var(--border-radius);
+}
+
+.search-menu div.search-input,
+.search-menu-container div.search-input {
+  background-color: var(--custom-text_background);
+  border-radius: var(--border-radius);
+}
+
+div.search-menu-panel div.results {
+  background-color: var(--custom-text_background);
+  border-radius: var(--border-radius);
+}
+
+// Search page
+body.search-page {
+  button.search-cta {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  #search-in-category-body {
+    background-color: var(--custom-text_background);
+  }
+
+  div.search-results {
+    & > div {
+      // Results container
+      background-color: var(--custom-text_background);
+      border-radius: var(--border-radius);
+      border: 2px solid var(--primary-low);
+    }
+    .loading-container {
+      // No results container
+      padding: 2em 3ch 2em 2ch;
+    }
+  }
+}
+
+// Category-view page header
+.category-title-header {
+  border: 2px solid var(--primary-low-mid) !important;
+  background-color: var(--custom-text_background);
+  border-radius: 14px;
+}
+
+// Topic-view title
+#topic-title .title-wrapper {
+  div.topic-category {
+    margin-top: 1em;
+  }
+}

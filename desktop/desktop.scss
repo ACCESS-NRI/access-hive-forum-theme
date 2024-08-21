@@ -1,100 +1,188 @@
-.category-title-header {
-    background-color: white;
-    border-left: 2px solid #e9e9e9 !important;
-    border-radius: 14px;
+// Variables
+:root {
+  --topic-body-width: 72ch;
+  --topic-body-width-padding: 5ch;
+  --large-border-radius: 14px;
+  --small-border-radius: 7px;
 }
 
-.category-boxes .category-box, .category-boxes-with-topics .category-box  {
-    background-color: white;
-    transition: box-shadow .3s;
-    border-radius: 14px;
-    border-width: 2px;
-    border-color: var(--primary-low);
-    border-style: solid;
+// Chat page tweak
+body.chat-enabled {
+  div.full-page-chat {
+    .chat-composer__wrapper {
+      padding-bottom: 3em;
+    }
+  }
 }
 
-.category-boxes .category-box-inner, .category-boxes-with-topics .category-box-inner {
-    border-radius: var(--d-border-radius);
-    border-width: 0;
+// Category page topic list styling
+body.category {
+  table.category-list {
+    div.topics,
+    td.topics,
+    th.topics {
+      text-align: center;
+      .badge-notification {
+        text-align: center;
+      }
+    }
+  }
 }
 
-.category-boxes .category-box:hover, .category-boxes-with-topics .category-box:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+// Search page - desktop-specific
+body.search-page {
+  button.search-cta {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  #search-in-category-body {
+    background-color: var(--custom-text_background);
+  }
+
+  div.search-results {
+    & > div {
+      background-color: var(--custom-text_background);
+    }
+    .fps-result {
+      margin-left: 2ch;
+      margin-right: 3ch;
+      &:first-child {
+        padding-top: 2em;
+      }
+    }
+  }
+}
+
+// Category list view
+.category-boxes .category-box,
+.category-boxes-with-topics .category-box {
+  background-color: var(--custom-text_background);
+  transition: box-shadow 0.3s;
+  border-radius: var(--large-border-radius);
+  border-width: 2px;
+  border-color: var(--primary-low);
+  border-style: solid;
+}
+
+.category-boxes .category-box-inner,
+.category-boxes-with-topics .category-box-inner {
+  border-radius: var(--small-border-radius);
+  border-width: 0;
+}
+
+.category-boxes .category-box:hover,
+.category-boxes-with-topics .category-box:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.1);
 }
 
 .category-boxes div.description {
-    font-size: var(--font-down-1);
-    margin-top: 0.5em;
-    line-height: 1.15;
+  font-size: var(--font-down-1);
+  margin-top: 0.5em;
+  line-height: 1.15;
+  color: var(--custom-category_tile_color);
 }
 
 .category-box a h3 {
-    line-height: 1;
+  line-height: 1;
 }
 
+.category.category-box {
+  border: 2px solid var(--category-badge-color);
+  &::before {
+    display: none;
+  }
+}
+
+// Category boxes left colour box
+// .category.category-box::before {
+//   position: absolute;
+//   top: 0;
+//   left: -1px;
+//   content: "";
+//   width: 9px;
+//   height: 100%;
+//   background-color: var(--category-badge-color);
+//   border-top-left-radius: 9px;
+//   border-bottom-left-radius: 9px;
+// }
+
+.category-boxes .category-box .category-logo.aspect-image img,
+.category-boxes-with-topics .category-box .category-logo.aspect-image img {
+  --height: 4em;
+}
+
+// Category list view navigation bar
+.list-controls .combo-box .combo-box-header {
+  background-color: var(--custom-text_background);
+}
+
+// Topic-view posts
+#topic-title .title-wrapper {
+  h1 {
+    display: flex;
+    line-height: 1;
+  }
+
+  a.edit-topic {
+    margin-left: 1ch;
+  }
+}
+
+.topic-body div.topic-meta-data {
+  margin-top: 1em;
+}
 .onscreen-post .row {
-    gap: 2ch;
+  gap: 2ch;
 }
 
 .more-topics__container .more-topics__list .topic-list-header:after {
-    height: 0;
+  height: 0;
 }
 
-.more-topics__container .more-topics__list .topic-list-body .topic-list-item:first-child td {
-    padding-top: 0.8em;
+.more-topics__container
+  .more-topics__list
+  .topic-list-body
+  .topic-list-item:first-child
+  td {
+  padding-top: 0.8em;
 }
 
 div.topic-avatar {
-    border-top: none;
+  border-top: none;
 }
 
 .topic-body {
-    background-color: white !important;
+  background-color: var(--custom-text_background);
+  border: 2px solid var(--primary-low) !important;
+  border-radius: var(--large-border-radius);
 }
 
-:root {
-    --topic-body-width: 72ch;
-    --topic-body-width-padding: 5ch;
-    --d-border-radius: 7px;
-    --header_background: #005b94;
-    --header_primary-low-mid: gainsboro;
+.topic-avatar,
+.topic-map,
+.small-action-desc,
+.post-links,
+.topic-timer-info {
+  border-top: none !important;
+}
+
+// topic post
+// add margin when topic posts are adjacent
+.topic-post + .topic-post {
+  margin-top: 1em;
 }
 
 .small-action.topic-post-visited div.topic-post-visited-line,
 .small-action div.small-action-desc {
-    width: 100%;
+  width: 100%;
 }
 
 .topic-map,
 section.post-menu-area {
-    margin-right: var(--topic-body-width-padding);
+  margin-right: var(--topic-body-width-padding);
 }
 
-.category.category-box::before {
-    position: absolute;
-    top: 0;
-    left: -1px;
-    content: "";
-    width: 9px;
-    height: 100%;
-    background-color: var(--category-badge-color);
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
-}
-
+// All tables
 tbody {
-    background-color: white;
-}
-
-.list-controls .combo-box .combo-box-header {
-    background-color: white;
-}
-
-.category-boxes .category-box .category-logo.aspect-image img,
-.category-boxes-with-topics .category-box .category-logo.aspect-image img {
-    --height: 4em;
-}
-
-.search-menu div.search-input, .search-menu-container div.search-input {
-  background-color: white;
+  background-color: var(--custom-text_background);
 }
