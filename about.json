@@ -34,8 +34,7 @@
     "https://github.com/discourse/discourse-topic-thumbnails.git",
     "https://github.com/discourse/discourse-welcome-link-banner",
     "https://github.com/discourse/discourse-search-banner.git",
-    "https://github.com/discourse/discourse-color-scheme-toggle",
-    "https://github.com/discourse/hljs-theme-picker"
+    "https://github.com/discourse/discourse-color-scheme-toggle"
   ],
   "modifiers": {},
   "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
