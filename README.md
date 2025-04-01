@@ -58,3 +58,7 @@ Occasionally there may be an issue where the new theme isn't displayed properly 
 ### Updating the theme
 
 To update the theme, first make your desired changes, commit and push to this repository. Then navigate to the Discourse [themes admin page](https://forum.access-hive.org.au/admin/customize/themes), select "ACCESS-NRI Hive Forum Theme" in the sidebar, click the "Check for Updates" button and then "Update to Latest". This will update the theme to the latest version.
+
+### A note on Theme Components
+
+Components can be added directly to the theme via the Discourse GUI, bypassing this theme. This results in the list of components on Discourse and the list in [```about.json```](https://github.com/ACCESS-NRI/access-hive-forum-theme/blob/main/about.json) being out of sync. This is not necessarily a problem, as even when ```Check for Updates``` is called, the resulting components in the theme seems to be a combination of the list in the GUI and the list in ```about.json```. However, we would recommend adding the component to the repository, to prevent confusion and address potential incompatible components.
