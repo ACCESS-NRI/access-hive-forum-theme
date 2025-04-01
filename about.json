@@ -37,6 +37,7 @@
     "https://github.com/discourse/discourse-topic-thumbnails.git",
     "https://github.com/discourse/discourse-welcome-link-banner",
     "https://github.com/discourse/discourse-search-banner.git",
+    "https://github.com/moin-Jana/prefilled-composer-generator",
     "https://github.com/discourse/discourse-color-scheme-toggle"
   ],
   "modifiers": {},
