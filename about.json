@@ -39,6 +39,7 @@
     "https://github.com/discourse/discourse-search-banner.git",
     "https://github.com/moin-Jana/prefilled-composer-generator",
     "https://github.com/discourse/discourse-color-scheme-toggle"
+    "https://github.com/discourse/discourse-hide-auth-method"
   ],
   "modifiers": {},
   "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
